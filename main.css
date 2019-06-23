@@ -83,7 +83,7 @@ a {
  }
  .nav-right a:first-child {
      color: var(--main-blue);
-     margin-right: 60px;
+     margin-right: 10px;
  }
  .rec {
      background-color: var(--main-blue);
