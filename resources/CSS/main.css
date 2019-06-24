@@ -158,10 +158,10 @@ a {
     left: 60px;
  }
  .section2 {
-     margin-top: 700px;
+     margin-top: 500px;
  }
  .section3 {
-    margin-top: -100px;
+    margin-top: -200px;
     display: flex;
 }
  .rec-large-2 {
@@ -218,6 +218,21 @@ a {
 .left-line-3 {
    transform: translateX(-900px);
    -webkit-transform: translateX(-900px);
+}
+.center-love {
+    text-align: center;
+}
+.love {
+    display: inline-block;
+    margin-bottom: 150px;
+}
+.love p {
+    font-size: 20px;
+}
+
+.love p i {
+    vertical-align: middle;
+    color: rgb(255, 51, 95);
 }
 
 /*
