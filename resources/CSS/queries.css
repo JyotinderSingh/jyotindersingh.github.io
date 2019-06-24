@@ -102,11 +102,25 @@
 
     .line2 {
         height: 3px;
-        width: 60px;
+        width: 50px;
         background-color: var(--main-black);
         position: absolute;
         top: 30px;
         left: 60px;
+    }
+    .right {
+        margin-right: 20px;
+    }
+    .skill-box {
+        background-color: white;
+        margin: 30px 0;
+        text-align: center;
+        width: 340px;
+        height: 120px;
+        line-height: 120px;
+        -webkit-box-shadow: 0px 5px 20px 0px rgba(75,79,124,0.1);
+        -moz-box-shadow: 0px 5px 20px 0px rgba(75,79,124,0.1);
+        box-shadow: 0px 5px 20px 0px rgba(75,79,124,0.1);
     }
 
 
@@ -155,7 +169,15 @@
         width: 95%;
         margin: 0 auto;
     }
-
+    .rec-large {
+        background-color: var(--main-blue);
+        height: 190px;
+        width: 520px;
+        position: absolute;
+        top: -60px;
+        left: -80px;
+        z-index: -1;
+    }
     .rec-large-2 {
         background-color: var(--main-blue);
         height: 260px;
@@ -236,9 +258,9 @@
     .right {
         margin-right: 20px;
     }
-    line2 {
+    .line2 {
         height: 3px;
-        width: 10px;
+        width: 35px;
         background-color: var(--main-black);
         position: absolute;
         top: 30px;
@@ -246,7 +268,103 @@
     }
 }
 
+@media only screen and (max-width: 650px) {
+    h1 {
+        font-size: 28px;
+        font-weight: 900;
+        color: var(--main-black);
+    }
 
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--main-black);
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: 400;
+        /*testing*/
+        color: var(--main-gray);
+    }
+
+    .skills {
+        float: right;
+        display: block;
+    }
+
+    .skill-box {
+        background-color: white;
+        margin: 30px 0;
+        text-align: center;
+        width: 200px;
+        height: 120px;
+        line-height: 120px;
+        -webkit-box-shadow: 0px 5px 20px 0px rgba(75, 79, 124, 0.1);
+        -moz-box-shadow: 0px 5px 20px 0px rgba(75, 79, 124, 0.1);
+        box-shadow: 0px 5px 20px 0px rgba(75, 79, 124, 0.1);
+    }
+
+    .wrapper-content {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .rec-large {
+        background-color: var(--main-blue);
+        height: 155px;
+        width: 350px;
+        position: absolute;
+        top: -60px;
+        left: -80px;
+        z-index: -1;
+    }
+    .rec-large-2 {
+        background-color: var(--main-blue);
+        height: 250px;
+        width: 690px;
+        position: absolute;
+        top: -142px;
+        left: -472px;
+        z-index: -1;
+    }
+    .right {
+        margin-right: 20px;
+    }
+    .right p b {
+        font-size: 19px;
+        max-width: 500px;
+    }
+    .line2 {
+        height: 3px;
+        width: 0px;
+        background-color: var(--main-black);
+        position: absolute;
+        top: 30px;
+        left: 60px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 40px;
+        right: 5%;
+    }
+    .social {
+        position: fixed;
+        left: 5%;
+    }
+    .social > a {
+        margin-right: 20px;
+    }
+    .social > a {
+        font-weight: 700;
+        font-size: 15px;
+    }
+    footer > p {
+        font-weight: 700;
+        font-size: 13px;
+    }
+}
 
 /*small phones from 0 to 480px*/
 @media only screen and (max-width: 480px) {
