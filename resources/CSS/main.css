@@ -68,6 +68,7 @@ a {
      left: 5%;
      line-height: 50px;
      width: 100%;
+     z-index: -3;
  }
  nav a {
      font-weight: 700;
