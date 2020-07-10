@@ -4,144 +4,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jyotinder Singh</title>
-    <link rel="stylesheet" href="resources/CSS/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="vendors/CSS/animate.css">
-    <link rel="stylesheet" type="text/css" href="resources/CSS/queries.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" type="image/png" href="resources/images/favicon.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <script src="https://kit.fontawesome.com/2c222c93e6.js"></script>
+    <title>Jyotinder Singh</title>
 </head>
 
 <body>
-    <div class="detail-lines">
-        <div class="left-line-1 lines"></div>
-        <div class="left-line-2 lines"></div>
-        <div class="left-line-3 lines"></div>
-        <div class="center-line lines"></div>
-        <div class="right-line-1 lines"></div>
-        <div class="right-line-2 lines"></div>
-        <div class="right-line-3 lines"></div>
 
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item" onclick="document.getElementById('navi-toggle').checked = false;"><a
+                        href="#about" class="navigation__link">About Me</a></li>
+                <li class="navigation__item" onclick="document.getElementById('navi-toggle').checked = false;"><a
+                        href="#skills" class="navigation__link">Skills</a></li>
+                <li class="navigation__item" onclick="document.getElementById('navi-toggle').checked = false;"><a
+                        href="#projects" class="navigation__link">Projects</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <nav>
-        <a href="#" class="logo">
-            <div class="rec"></div>JYOTINDER SINGH
-        </a>
-        <div class="nav-right">
-            <a href="https://www.linkedin.com/in/jyotinder-singh/">CONTACT ME</a><img
-                src="resources/images/icon-work.png" alt="work icon">
-            <!-- <a href="#">WORK <img src="images/icon-work.png" alt="work icon"></a> -->
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Hey, I'm Jyotinder</span>
+                <span class="heading-primary--sub">I like to write <span
+                        style="background-color: rgba(222, 213, 255, 0.801); padding: 0.5rem; border-radius: 0.3rem;">code</span>,
+                    design visual experiences, and click
+                    photographs.
+                </span>
+            </h1>
+
+            <a href="#about" class="btn btn--white btn--animated">learn more</a>
         </div>
-    </nav>
-    <div class="wrapper-content">
-        <div class="landing">
-            <div class="left animated fadeInUp">
-                <div class="line"></div>
-                <h1>JYOTINDER SINGH<br>DEVELOPER. DESIGNER.</h1>
-                <p>Hi, my name is Jyotinder Singh. I'm a 3rd year student from Manipal Institute of Technology majoring in Information Technology.<br><br>
-                    I love to code, design, and take photographs.
-                </p>
-                <div class="rec-large"></div>
+    </header>
+
+    <main>
+        <section class="section-about">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary" id="about">
+                    About me
+                </h2>
             </div>
-            <div class="right">
-                <div class="skills">
-                    <a href="https://github.com/JyotinderSingh" target="_blank">
-                        <div class="skill-box animated fadeInRightBig delay-1">
-                            <h2>GitHub</h2>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jyotinder-singh/" target="_blank">
-                        <div class="skill-box animated fadeInRightBig delay-2">
-                            <h2>LinkedIn</h2>
-                        </div>
-                    </a>
-                    <a href="https://www.instagram.com/jyotinder_singh/" target="_blank">
-                        <div class="skill-box animated fadeInRightBig delay-3">
-                            <h2>Instagram</h2>
-                        </div>
-                    </a>
-                    <!-- <div class="skill-box animated fadeInRightBig delay-4">
-                        <h2>Things I do</h2>
-                    </div> -->
+            <div class="row">
+                <div class="col-1-of-2">
+                    <!-- <h3 class="heading-tertiary">Personal</h3> -->
+                    <p class="paragraph">
+                        I'm a fourth year Information Technology student at Manipal Institute of Technology, with
+                        multifaceted interests in programming, designing, and Photography. I
+                        spend most of my time on problem solving, software developement, and design.
+                    </p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Developer</h3>
+                    <p class="paragraph">
+                        I usually work with C++, Python, TensorFlow, JavaScript, React, Flutter, HTML, CSS, and Sass.
+                    </p>
+
+                    <a href="https://drive.google.com/file/d/1eUf7ftZWuAXhX_TQfCb-XWvckZOINE6M/view?usp=sharing" target="_blank" class="btn-text u-margin-left-small"> <i class="far fa-file-pdf"></i> Resume</a>
+                    <a href="https://github.com/JyotinderSingh" target="_blank" class="btn-text u-margin-left-small"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jyotinder-singh/" target="_blank" class="btn-text u-margin-left-small"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/jyotinder_singh/" target="_blank" class="btn-text u-margin-left-small"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <!-- <img src="img/pic-1.png" alt="Photo 1" class="composition__photo composition__photo--p1"> -->
+                        <img src="img/pic-2.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img src="img/pic-3.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="section2">
-            <div class="left r wow fadeInLeft">
-                <a href="https://github.com/JyotinderSingh"><img class="arrow" src="resources/images/icon-arrow.png"
-                        alt="arrow icon"></a>
-                <h1 class="white">CHECK OUT MY PROJECTS</h1>
-                <div class="rec-large-2"></div>
-            </div>
-            <div class="right r wow fadeInUp">
-                <div class="line2"></div>
-                <h1>DEVELOPER</h1>
-                <p class="tech"><b>C++, PYTHON, JAVASCRIPT, DEEP LEARNING, FLUTTER</b></p>
-                <br>
-                <p>Checkout my GitHub profile to take a look at some of my projects.
-                    I'm constantly trying to learn new things!</p>
-            </div>
-        </div>
+        </section>
 
-        <div class="section3">
-            <div class="left r wow fadeInLeft">
-                <a href="https://www.instagram.com/jyotinder_singh/"><img class="arrow"
-                        src="resources/images/icon-arrow.png" alt="arrow icon"></a>
-                <h1 class="white">TAKE A LOOK</h1>
-                <div class="rec-large-2"></div>
+        <section class="section-features">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary-bg" id=skills>
+                    Skills
+                </h2>
             </div>
-            <div class="right r wow fadeInUp">
-                <div class="line2"></div>
-                <h1>DESIGN &amp;<br>PHOTOGRAPHY</h1>
-                <p class="tech"><b>Adobe Photoshop, Illustrator, After Effects, Premiere Pro, Procreate, Cinema 4D</b>
-                </p>
-                <br>
-                <p>I love taking photographs and designing new things. Design and photography allow me to express my
-                    creative side, and bring out the artist in me.
-                </p>
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-layer-group"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Deep Learning</h3>
+                        <p class="feature-box__text">TensorFlow<br />Keras<br />NumPy<br />Pandas</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-code"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Web</h3>
+                        <p class="feature-box__text">React<br />Sass<br />JavaScript<br />HTML / CSS</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Software Development</h3>
+                        <p class="feature-box__text">C++<br />Python<br />Java</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fab fa-app-store"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Application Development</h3>
+                        <p class="feature-box__text">Flutter<br />Firebase<br />Android Studio</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section3">
-            <div class="left r wow fadeInLeft">
-                <a href="https://www.manipalthetalk.org/"><img class="arrow" src="resources/images/icon-arrow.png"
-                        alt="arrow icon"></a>
-                <h1 class="white">FIND OUT MORE</h1>
-                <div class="rec-large-2"></div>
+
+        <section class="section-tours">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary" id="projects">
+                    Projects
+                </h2>
             </div>
-            <div class="right r wow fadeInUp">
-                <div class="line2"></div>
-                <h1>CREATIVE<br>DIRECTOR</h1>
-                <p class="tech"><b>Ex-Creative Director at MTTN, the largest student run media body in Manipal</b></p>
-                <br>
-                <p><b>2017 - 2020</b></p><br>
-                <p>Responsible for leading the creative vision of the organisation and managing a crew of about 300
-                    people, working in various departments like writing,
-                    photography, art and design, and public relations.
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1">TinyFlow: ANN Framework</span>
+
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>Multiple Layer Types</li>
+                                    <li>Several Activation Functions</li>
+                                    <li>Several Optimizers</li>
+                                    <li>Multiple Loss Funcitons</li>
+                                    <li>Inbuilt Wrapper Class</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-1">
+                            <div class="card__cta">
+                                <div class="card__fork-box">
+                                    <p class="card__fork-on">fork on</p>
+                                    <i class="fab fa-github card__fork-icon"></i>
+                                </div>
+                                <a href="https://github.com/JyotinderSingh/TinyFlow-ANN-Framework" target="_blank" class="btn btn--card-white">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">ShopLyft: Ecommerce App</span>
+
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>User Authentication</li>
+                                    <li>Dynamic Cart</li>
+                                    <li>Add / Edit / Remove Products</li>
+                                    <li>View Previous Orders</li>
+                                    <li>Auto Login / Logout</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-2">
+                            <div class="card__cta">
+                                <div class="card__fork-box">
+                                    <p class="card__fork-on">fork on</p>
+                                    <i class="fab fa-github card__fork-icon"></i>
+                                </div>
+                                <a href="https://github.com/JyotinderSingh/ShopLyft" target="_blank" class="btn btn--card-white">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--3">SocialApe: Social Media</span>
+
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>Twitter Style Application</li>
+                                    <li>User Authentication</li>
+                                    <li>Create / Delete Posts</li>
+                                    <li>Notifications for Comments</li>
+                                    <li>View Other Users</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-3">
+                            <div class="card__cta">
+                                <div class="card__fork-box">
+                                    <p class="card__fork-on">fork on</p>
+                                    <i class="fab fa-github card__fork-icon"></i>
+                                </div>
+                                <a href="https://github.com/JyotinderSingh/SocialApe-React-Client" target="_blank" class="btn btn--card-white">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--4">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">JavaFlix: Recommendation
+                                    Engine</span>
+
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>Collaborative Filtering</li>
+                                    <li>No external APIs</li>
+                                    <li>Clean Swings UI</li>
+                                    <li>Filters</li>
+                                    <li>Works Offline</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-2">
+                            <div class="card__cta">
+                                <div class="card__fork-box">
+                                    <p class="card__fork-on">fork on</p>
+                                    <i class="fab fa-github card__fork-icon"></i>
+                                </div>
+                                <a href="https://github.com/JyotinderSingh/JavaFlix---Movie-Recommendation-System" target="_blank" class="btn btn--card-white">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--5">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--3">COVID19: Dashboard</span>
+
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>Fetches Live Data</li>
+                                    <li>Filter by Country</li>
+                                    <li>Line / Bar charts</li>
+                                    <li>Shows 3 Different Metrics</li>
+                                    <li>Modern UI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-3">
+                            <div class="card__cta">
+                                <div class="card__fork-box">
+                                    <p class="card__fork-on">fork on</p>
+                                    <i class="fab fa-github card__fork-icon"></i>
+                                </div>
+                                <a href="https://github.com/JyotinderSingh/COVID-19-Dashboard" target="_blank" class="btn btn--card-white">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--6">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1">URL Shortner</span>
+
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>Generate Short Unique URLs</li>
+                                    <li>MongoDB Database</li>
+                                    <li>node.js Backend</li>
+                                    <li>View All Previous URLs</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-1">
+                            <div class="card__cta">
+                                <div class="card__fork-box">
+                                    <p class="card__fork-on">fork on</p>
+                                    <i class="fab fa-github card__fork-icon"></i>
+                                </div>
+                                <a href="https://github.com/JyotinderSingh/URL-Shortner" target="_blank" class="btn btn--card-white">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="u-center-text u-margin-top-huge">
+                <a href="https://github.com/JyotinderSingh" target="_blank" class="btn btn--white btn--animated">View All Projects</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            Built with <i class="fas fa-heart footer__logo"></i> in Manipal
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="https://github.com/JyotinderSingh" class="footer__link">GitHub</a></li>
+                        <li class="footer__item"><a href="https://www.linkedin.com/in/jyotinder-singh/" class="footer__link">LinkedIn</a></li>
+                        <li class="footer__item"><a href="https://www.instagram.com/jyotinder_singh/" class="footer__link">Instagram</a></li>
+                        <li class="footer__item"><a href="https://www.youtube.com/c/JyotinderSingh" class="footer__link">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="https://jyotindersingh.com/" class="footer__link">Jyotinder Singh</a>.<br />Copyright &copy; 2020 Jyotinder
+                    Singh.
                 </p>
             </div>
         </div>
-    </div>
-    <footer>
-        <!-- <div class="social">
-            <a href="https://github.com/JyotinderSingh">GitHub</a>
-            <a href="https://www.linkedin.com/in/jyotinder-singh/">LinkedIn</a>
-            <a href="https://www.instagram.com/jyotinder_singh/">Instagram</a>
-        </div> -->
-        <p>2019 &copy; JYOTINDER SINGH</p>
     </footer>
-    <div class="center-love">
-        <div class="love">
-            <p><b>Made with <i class="material-icons">favorite</i> in Manipal</b></p>
+
+    <!-- <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
         </div>
-    </div>
-    <script src="vendors/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-2-of-3">
+                Col 2 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-2-of-4">
+                Col 2 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-3-of-4">
+                Col 3 of 4
+            </div>
+        </div>
+
+    </section> -->
+
+
 </body>
 
 </html>
