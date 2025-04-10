@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Consider creating reusable components for LinkItem and Project
 
 function HomePage() {
+  // State for animations
+  const [animateIntro, setAnimateIntro] = useState(false);
+  const [animateLinks, setAnimateLinks] = useState(false);
+  const [animateProjects, setAnimateProjects] = useState(false);
+
+  // Effect to trigger animations sequentially after mount
+  useEffect(() => {
+    const introTimer = setTimeout(() => setAnimateIntro(true), 100); // Intro first
+    const linksTimer = setTimeout(() => setAnimateLinks(true), 200); // Links shortly after
+    const projectsTimer = setTimeout(() => setAnimateProjects(true), 300); // Projects after links
+
+    // Cleanup timers on unmount
+    return () => {
+      clearTimeout(introTimer);
+      clearTimeout(linksTimer);
+      clearTimeout(projectsTimer);
+    };
+  }, []);
+
   return (
     <>
-      <section className="intro" aria-labelledby="intro-heading">
+      <section className={`intro ${animateIntro ? 'animate' : ''}`} aria-labelledby="intro-heading">
         {/* Note: Paths starting with / access the public folder */}
         <img
           src="/images/profile.png"
@@ -23,7 +42,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="links-section" aria-labelledby="links-heading">
+      <section className={`links-section ${animateLinks ? 'animate' : ''}`} aria-labelledby="links-heading">
         <h2 id="links-heading">Links</h2>
         <div className="links-container">
           {/* Using standard <a> tags for external links */}
@@ -70,7 +89,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="projects-section" aria-labelledby="projects-heading">
+      <section className={`projects-section ${animateProjects ? 'animate' : ''}`} aria-labelledby="projects-heading">
         <h2 id="projects-heading">Projects</h2>
         {/* We should refactor these into a Project component */}
         <article className="project" aria-labelledby="project1-heading">
