@@ -851,15 +851,17 @@ body.dark-mode .bookshelf-category-heading {
   margin-bottom: 1.5rem; /* Slightly reduced margin */
   padding-bottom: 1.5rem; /* Slightly reduced padding */
   border-bottom: 1px solid #ddd; /* Light mode border */
-  transition: border-color 0.2s ease, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: border-color 0.2s ease, opacity 0.5s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out; /* Include filter in transition */
   opacity: 0; /* Start hidden for animation */
   transform: translateY(10px); /* Start slightly lower for animation */
+  filter: blur(5px); /* Start blurred */
 }
 
 /* Add animation trigger - simple approach: make them visible */
 .book-item.animate {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0px); /* End unblurred */
 }
 
 
@@ -944,7 +946,8 @@ body.dark-mode .book-details p {
 .projects-section .project {
   opacity: 0;
   transform: translateY(15px); /* Start slightly lower */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  filter: blur(5px); /* Start blurred */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, filter 0.5s ease-out; /* Include filter in transition */
 }
 
 /* State when animation is triggered */
@@ -957,6 +960,7 @@ body.dark-mode .book-details p {
 .projects-section.animate .project {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0px); /* End unblurred */
 }
 
 /* --- Staggering Delays --- */
@@ -1023,7 +1027,8 @@ body.dark-mode .link-item:hover {
 .resume-main .resume-section > p > a /* Target the link inside the paragraph */ {
   opacity: 0;
   transform: translateY(15px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  filter: blur(5px); /* Start blurred */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, filter 0.5s ease-out; /* Include filter in transition */
 }
 
 /* Define the final state when .animate is added to the parent */
@@ -1034,6 +1039,7 @@ body.dark-mode .link-item:hover {
 .resume-main.animate .resume-section > p > a /* Target the link */ {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0px); /* End unblurred */
 }
 
 /* --- Resume Animation Delays (Applied when parent is animated) --- */
