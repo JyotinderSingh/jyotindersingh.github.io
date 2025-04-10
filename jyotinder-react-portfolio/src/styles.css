@@ -814,3 +814,120 @@ body:not(.dark-mode) .book-details p {
 #footer-placeholder {
   min-height: 50px; /* Adjust based on actual footer height */
 }
+
+/* Bookshelf Page Specific Styles */
+.bookshelf-page h1 {
+  margin-bottom: 2rem;
+  /* Inherit general h1 styling */
+}
+
+.bookshelf-category {
+  margin-bottom: 3rem;
+}
+
+.bookshelf-category-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd; /* Light mode border */
+}
+
+body.dark-mode .bookshelf-category-heading {
+  border-bottom-color: #333; /* Dark mode border */
+}
+
+/* Updated Book List/Item styles from styles.css - applied universally */
+.book-list {
+  list-style: none;
+  padding: 0;
+  /* Removed margin: 2rem 0; as it's now within a category section */
+}
+
+.book-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem; /* Slightly reduced margin */
+  padding-bottom: 1.5rem; /* Slightly reduced padding */
+  border-bottom: 1px solid #ddd; /* Light mode border */
+  transition: border-color 0.2s ease, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(10px); /* Start slightly lower for animation */
+}
+
+/* Add animation trigger - simple approach: make them visible */
+.book-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Stagger animation delays */
+.book-item:nth-child(1) { transition-delay: 0.1s; }
+.book-item:nth-child(2) { transition-delay: 0.2s; }
+.book-item:nth-child(3) { transition-delay: 0.3s; }
+.book-item:nth-child(4) { transition-delay: 0.4s; }
+.book-item:nth-child(5) { transition-delay: 0.5s; }
+/* Add more if needed, though complexity increases */
+
+
+.book-item:hover {
+  border-color: #ccc; /* Lighter border on hover in light mode */
+}
+
+body.dark-mode .book-item {
+  border-color: #222; /* Dark mode border */
+}
+
+body.dark-mode .book-item:hover {
+  border-color: #444; /* Lighter border on hover in dark mode */
+}
+
+.book-cover {
+  width: 60px; /* Slightly larger */
+  height: 90px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 4px;
+  background: #eee; /* Light mode placeholder bg */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+body.dark-mode .book-cover {
+  background: #1a1a1a; /* Dark mode placeholder bg */
+}
+
+.book-details {
+  flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.book-details strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500; /* Slightly less bold */
+  margin-bottom: 0.35rem;
+  color: #111;
+}
+
+body.dark-mode .book-details strong {
+  color: #eee;
+}
+
+.book-details p {
+  font-size: 0.95rem;
+  color: #555; /* Slightly darker text */
+  margin-top: 0; /* Remove default margin */
+}
+
+body.dark-mode .book-details p {
+  color: #bbb; /* Slightly lighter text */
+}
+
+/* Placeholder styling to reduce layout shift */
+#header-placeholder {
+  min-height: 70px; /* Adjust based on actual header height */
+}
+
+#footer-placeholder {
+  min-height: 50px; /* Adjust based on actual footer height */
+}
