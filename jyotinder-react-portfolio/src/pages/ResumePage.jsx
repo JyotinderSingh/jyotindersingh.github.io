@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Consider creating a reusable Job component
 
 function ResumePage() {
+  // State for animation
+  const [animatePage, setAnimatePage] = useState(false);
+
+  // Effect to trigger animation shortly after mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimatePage(true);
+    }, 100); // Small delay
+
+    return () => clearTimeout(timer); // Cleanup timer
+  }, []);
+
   return (
-    // Note: We transfer the className from the old <main> tag here
-    <div className="page-main resume-main">
+    // Add conditional animate class to the main container
+    <div className={`page-main resume-main ${animatePage ? 'animate' : ''}`}>
       <h1>Resume</h1>
       <section className="resume-section">
         <h2>Experience</h2>

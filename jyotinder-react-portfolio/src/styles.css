@@ -1006,3 +1006,169 @@ body.dark-mode .link-item:hover {
 }
 
 /* --- End HomePage Animations --- */
+
+/* --- ResumePage Styles & Animations --- */
+
+.resume-main {
+  /* Add some initial padding if needed, though <main> might handle it */
+}
+
+/* --- Corrected Animation Definitions --- */
+
+/* Define the initial state for elements within resume-main */
+.resume-main h1,
+.resume-main .resume-section h2,
+.resume-main .job,
+.resume-main .resume-section > p, /* Target direct paragraph children of section for Skills/PDF */
+.resume-main .resume-section > p > a /* Target the link inside the paragraph */ {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Define the final state when .animate is added to the parent */
+.resume-main.animate h1,
+.resume-main.animate .resume-section h2,
+.resume-main.animate .job,
+.resume-main.animate .resume-section > p, /* Target direct paragraph children */
+.resume-main.animate .resume-section > p > a /* Target the link */ {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Resume Animation Delays (Applied when parent is animated) --- */
+
+.resume-main.animate h1 { transition-delay: 0.1s; }
+
+/* Experience Section (Targeting direct children of the first section) */
+.resume-main.animate .resume-section:nth-of-type(1) > h2 { transition-delay: 0.2s; }
+.resume-main.animate .resume-section:nth-of-type(1) > .job:nth-of-type(1) { transition-delay: 0.3s; } /* Note: nth-of-type applies to siblings of the same type */
+.resume-main.animate .resume-section:nth-of-type(1) > .job:nth-of-type(2) { transition-delay: 0.4s; }
+
+/* Skills Section (Targeting direct children of the second section) */
+.resume-main.animate .resume-section:nth-of-type(2) > h2 { transition-delay: 0.5s; }
+.resume-main.animate .resume-section:nth-of-type(2) > p { transition-delay: 0.6s; }
+
+/* PDF Link Section (Targeting the paragraph in the third section) */
+.resume-main.animate .resume-section:nth-of-type(3) > p { transition-delay: 0.7s; }
+
+
+/* --- Rest of Resume Styles --- */
+
+.resume-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee; /* Light mode separator */
+}
+
+body.dark-mode .resume-section {
+  border-bottom-color: #222; /* Dark mode separator */
+}
+
+/* Remove border from the last section */
+.resume-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resume-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.job {
+  margin-bottom: 2rem;
+}
+
+.job h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.job p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+body.dark-mode .job p {
+  color: #bbb;
+}
+
+.job p em {
+  color: #333;
+  font-style: normal; /* Keep it normal but visually distinct */
+  /* Or add a background/border if preferred */
+}
+
+body.dark-mode .job p em {
+  color: #ddd;
+}
+
+.job ul {
+  list-style: disc;
+  margin: 0.5rem 0 0.5rem 1.5rem; /* Indent list */
+  padding-left: 1rem;
+  color: #444;
+}
+
+body.dark-mode .job ul {
+  color: #ccc;
+}
+
+.job ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Skills section paragraph */
+.resume-section p {
+  line-height: 1.7;
+  color: #333;
+}
+
+body.dark-mode .resume-section p {
+  color: #ccc;
+}
+
+/* PDF Link styling */
+.resume-section a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.resume-section a:hover {
+  background-color: #eee;
+  border-color: #bbb;
+  color: #111;
+}
+
+body.dark-mode .resume-section a {
+  border-color: #444;
+  color: #ccc;
+}
+
+body.dark-mode .resume-section a:hover {
+  background-color: #222;
+  border-color: #555;
+  color: #fff;
+}
+
+/* Placeholder styling to reduce layout shift */
+#header-placeholder {
+  min-height: 70px; /* Adjust based on actual header height */
+}
+
+#footer-placeholder {
+  min-height: 50px; /* Adjust based on actual footer height */
+}
+
+/* --- End ResumePage Styles & Animations --- */
