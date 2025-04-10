@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fira Code', Menlo, Monaco, 'Courier New', monospace;
+  font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
   font-size: 16px;
   line-height: 1.6;
   background: #f5f5f5; /* Default light mode background */
@@ -21,7 +21,7 @@ body {
 
 /* Dark mode classes */
 body.dark-mode {
-  background: #000; 
+  background: #000;
   color: #eee;
 }
 
@@ -151,7 +151,7 @@ body.dark-mode .nav-links a.active {
     align-items: flex-start;
     width: 200px;
     padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: none;
     z-index: 999; /* Ensure above other elements */
   }
@@ -161,7 +161,7 @@ body.dark-mode .nav-links a.active {
 
   body.dark-mode .nav-links {
     background: #111; /* Dark mode: dark background for menu */
-    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   }
 
   .nav-links a {
@@ -444,7 +444,8 @@ body:not(.dark-mode) a:hover {
 }
 
 /* Header, Footer: No background */
-header, footer {
+header,
+footer {
   background: none;
 }
 
@@ -804,4 +805,3 @@ body:not(.dark-mode) .book-details strong {
 body:not(.dark-mode) .book-details p {
   color: #333;
 }
-
