@@ -1057,7 +1057,7 @@ body.dark-mode .link-item:hover {
 
 .resume-section {
   margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem; /* Increased padding */
   border-bottom: 1px solid #eee; /* Light mode separator */
 }
 
@@ -1072,103 +1072,114 @@ body.dark-mode .resume-section {
 }
 
 .resume-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem; /* Slightly smaller */
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem; /* Increased margin */
+  color: #333;
+  /* border-bottom: 1px dashed #ccc; /* Optional: subtle separator for heading */
+  /* padding-bottom: 0.5rem; */
+}
+
+body.dark-mode .resume-section h2 {
+  color: #ddd;
+  /* border-bottom-color: #444; */
 }
 
 .job {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* Increased spacing between jobs */
 }
 
 .job h3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem; /* Slightly larger */
   font-weight: 500;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
+  color: #111;
+}
+body.dark-mode .job h3 {
+  color: #eee;
 }
 
-.job p {
-  margin: 0.25rem 0;
-  font-size: 0.95rem;
-  color: #555;
+/* Style for location/date paragraph */
+.job p:nth-of-type(1) {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+body.dark-mode .job p:nth-of-type(1) {
+  color: #999;
 }
 
-body.dark-mode .job p {
-  color: #bbb;
-}
-
+/* Style for team/platform name (using em tag) */
 .job p em {
-  color: #333;
-  font-style: normal; /* Keep it normal but visually distinct */
-  /* Or add a background/border if preferred */
+  font-style: normal;
+  /* font-weight: 500; /* Optional: slightly bolder */
+  color: #444; 
+  /* background-color: #eee; /* Optional: subtle background */
+  /* padding: 0.1em 0.3em; */
+  /* border-radius: 3px; */
 }
 
 body.dark-mode .job p em {
-  color: #ddd;
+  color: #bbb; 
+  /* background-color: #222; */
 }
 
 .job ul {
-  list-style: disc;
-  margin: 0.5rem 0 0.5rem 1.5rem; /* Indent list */
+  list-style-type: square; /* Change bullet style */
+  margin: 0.75rem 0 0.75rem 1.2rem; /* Adjusted margin */
   padding-left: 1rem;
-  color: #444;
+  color: #555;
 }
 
 body.dark-mode .job ul {
-  color: #ccc;
+  color: #aaa;
 }
 
 .job ul li {
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
+  margin-bottom: 0.5rem; /* Spacing between bullet points */
+  line-height: 1.6;
 }
 
 /* Skills section paragraph */
-.resume-section p {
-  line-height: 1.7;
+.resume-section:nth-of-type(2) > p { /* More specific selector for skills */
+  line-height: 1.8; /* Increased line height */
   color: #333;
+  font-size: 1rem;
+  /* Consider making skills look like tags if modifying JSX */
 }
 
-body.dark-mode .resume-section p {
+body.dark-mode .resume-section:nth-of-type(2) > p {
   color: #ccc;
 }
 
-/* PDF Link styling */
-.resume-section a {
+/* PDF Link styling - make it less like a button, more like a prominent link */
+.resume-section:nth-of-type(3) a {
   display: inline-block;
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
+  padding: 0.25rem 0; /* Remove padding */
+  border: none; /* Remove border */
+  border-bottom: 1px dashed #555; /* Dashed underline */
+  border-radius: 0; /* Remove radius */
+  color: #555; /* Match normal link color */
   text-decoration: none;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease; /* Keep transitions */
 }
 
-.resume-section a:hover {
-  background-color: #eee;
-  border-color: #bbb;
+.resume-section:nth-of-type(3) a:hover {
+  background-color: transparent; /* No background change */
+  border-color: #111;
   color: #111;
 }
 
-body.dark-mode .resume-section a {
-  border-color: #444;
-  color: #ccc;
+body.dark-mode .resume-section:nth-of-type(3) a {
+  border-color: #777;
+  color: #aaa; /* Match dark mode link color */
 }
 
-body.dark-mode .resume-section a:hover {
-  background-color: #222;
-  border-color: #555;
-  color: #fff;
-}
-
-/* Placeholder styling to reduce layout shift */
-#header-placeholder {
-  min-height: 70px; /* Adjust based on actual header height */
-}
-
-#footer-placeholder {
-  min-height: 50px; /* Adjust based on actual footer height */
+body.dark-mode .resume-section:nth-of-type(3) a:hover {
+  background-color: transparent;
+  border-color: #eee;
+  color: #eee;
 }
 
 /* --- End ResumePage Styles & Animations --- */
