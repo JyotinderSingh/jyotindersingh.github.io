@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Bookshelf · Jyotinder Singh</title><script>
       // Runs before first paint. Three jobs:
       // 1. apply the theme (the reader's choice, else the system preference);
-      // 2. when a cross-document view transition is carrying this page in,
-      //    flag it so the print-in animation doesn't stack on top;
+      // 2. flag page turns from within the site so the print-in only runs on
+      //    a fresh arrival;
       // 3. ink each heading-row hairline the first time it scrolls into view.
       (function () {
         var d = document.documentElement;
@@ -21,9 +21,13 @@
         d.dataset.theme = t;
         d.classList.add("js");
 
-        // `pagereveal` fires before the new document's first render and says
-        // whether a view transition is in progress. Browsers without it simply
-        // run the print-in on every load, which is also what they show.
+        // A page turn from elsewhere on this site must not replay the print-in
+        // (the content would visibly rise again on every tap). Two signals:
+        // the referrer for any same-site navigation, and `pagereveal` for a
+        // view transition. Reloads and cross-site arrivals keep the print-in.
+        var nav = performance.getEntriesByType ? performance.getEntriesByType("navigation")[0] : null;
+        var sameSite = document.referrer.indexOf(location.origin + "/") === 0;
+        if (sameSite && nav && nav.type !== "reload") d.classList.add("is-turned");
         addEventListener("pagereveal", function (e) {
           if (e.viewTransition) d.classList.add("is-turned");
         });
