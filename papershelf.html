@@ -6,6 +6,12 @@
       // 3. ink each heading-row hairline the first time it scrolls into view.
       (function () {
         var d = document.documentElement;
+        // Tidy doubled slashes left by upstream redirects (e.g. "/\/bookshelf" from
+        // jyotinder.com). Pages already serves the right page, so only the
+        // address bar needs fixing.
+        if (/\/{2,}/.test(location.pathname)) {
+          history.replaceState(null, "", location.pathname.replace(/\/{2,}/g, "/") + location.search + location.hash);
+        }
         var t = null;
         try { t = localStorage.getItem("theme"); } catch (e) {}
         // A stored choice wins; otherwise follow the system preference.
